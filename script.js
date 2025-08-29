@@ -1,54 +1,91 @@
-// Menu Toggle futurista
+// ========================= MENU TOGGLE NEON =========================
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-menuToggle.onclick = () => navLinks.classList.toggle('active');
 
-// Header Particles Neon Ultra-futurista
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
+
+// ========================= HEADER PARTICLES FUTURISTAS =========================
 const header = document.querySelector('header');
-const particleCount = 120;
+const particleCount = 200; // mais partículas para maior imersão
 
-for(let i=0;i<particleCount;i++){
+for (let i = 0; i < particleCount; i++) {
   const dot = document.createElement('span');
   dot.className = 'header-dot';
-  const size = Math.random()*3 + 1.5;
+
+  const size = Math.random() * 3 + 1;
+  const delay = Math.random() * 5;
+  const duration = Math.random() * 15 + 10;
+
   dot.style.cssText = `
     position:absolute;
-    left:${Math.random()*100}%;
-    top:${Math.random()*100}%;
+    left:${Math.random() * 100}%;
+    top:${Math.random() * 100}%;
     width:${size}px;
     height:${size}px;
-    background: linear-gradient(45deg,#00ffff,#0099ff,#aa00ff);
+    background: radial-gradient(circle, #00ffff, #0099ff, #aa00ff);
     border-radius:50%;
-    box-shadow:0 0 ${size*2}px #00ffff,0 0 ${size*4}px #aa00ff;
-    animation:float ${Math.random()*15+5}s ease-in-out infinite alternate;
-    opacity:${Math.random()*0.8+0.2};
+    box-shadow:0 0 ${size * 3}px #00ffff, 0 0 ${size * 6}px #aa00ff;
+    animation: float ${duration}s ease-in-out ${delay}s infinite alternate,
+               rotateGlow ${duration * 1.5}s linear infinite;
+    opacity:${Math.random() * 0.8 + 0.3};
   `;
+
   header.appendChild(dot);
 }
 
-// CSS Animations dinâmicas
-const style = document.createElement('style');
+// ========================= INTERAÇÃO MOUSE (PARALLAX) =========================
+document.addEventListener("mousemove", e => {
+  const { innerWidth, innerHeight } = window;
+  const moveX = (e.clientX - innerWidth / 2) / 100;
+  const moveY = (e.clientY - innerHeight / 2) / 100;
+
+  header.querySelectorAll(".header-dot").forEach((dot, index) => {
+    const depth = index % 5 + 1; // camadas diferentes
+    dot.style.transform = `translate(${moveX / depth}px, ${moveY / depth}px)`;
+  });
+});
+
+// ========================= HERO TITLE EFEITO PARALLAX =========================
+const heroTitle = document.querySelector(".hero h1");
+document.addEventListener("mousemove", e => {
+  const moveX = (e.clientX / window.innerWidth - 0.5) * 20;
+  const moveY = (e.clientY / window.innerHeight - 0.5) * 20;
+  heroTitle.style.transform = `translate(${moveX}px, ${moveY}px)`;
+});
+
+// ========================= CSS ANIMATIONS EXTRA =========================
+const style = document.createElement("style");
 style.innerHTML = `
 @keyframes float {
-  0%{transform:translate(0px,0px);}
-  25%{transform:translate(${Math.random()*30-15}px,${Math.random()*20-10}px);}
-  50%{transform:translate(${Math.random()*30-15}px,${Math.random()*20-10}px);}
-  75%{transform:translate(${Math.random()*30-15}px,${Math.random()*20-10}px);}
-  100%{transform:translate(0px,0px);}
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
 }
 
-/* Glow animado para hero */
-.hero h1 span {
-  animation: neonPulse 2s ease-in-out infinite alternate;
-}
-@keyframes neonPulse {
-  0%{text-shadow:0 0 10px #00ffff,0 0 20px #00ffff,0 0 30px #aa00ff;}
-  50%{text-shadow:0 0 20px #00ffff,0 0 30px #00ffff,0 0 40px #aa00ff;}
-  100%{text-shadow:0 0 10px #00ffff,0 0 20px #00ffff,0 0 30px #aa00ff;}
+@keyframes rotateGlow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
 }
 
-/* Menu toggle neon */
-.menu-toggle { transition:0.3s; color:#00ffff; }
-.menu-toggle:hover { color:#aa00ff; text-shadow:0 0 10px #00ffff,0 0 20px #aa00ff; }
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+  background: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+  background: #aa00ff;
+  box-shadow: 0 0 10px #aa00ff;
+}
+
+.nav-links.active {
+  clip-path: circle(150% at top right);
+  transition: clip-path 1s ease-in-out;
+}
 `;
 document.head.appendChild(style);
