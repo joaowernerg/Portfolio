@@ -1,114 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>João Werner - Portfólio</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Werner - Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER -->
+  <header class="header">
+    <canvas id="particles"></canvas>
+    <nav class="nav">
+      <h1 class="logo">João Werner</h1>
+      <ul class="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#softskills">Soft Skills</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h2>Olá, eu sou <span>João Werner</span></h2>
+      <p>Desenvolvedor Front-End em formação, apaixonado por tecnologia ⚡</p>
+      <a href="#contato" class="btn">Entre em contato</a>
+    </div>
+  </header>
 
-<header>
-<nav>
-<div class="logo">João Werner</div>
-<ul class="nav-links">
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#habilidades">Habilidades</a></li>
-<li><a href="#formacao">Formação</a></li>
-<li><a href="#softskills">Soft Skills</a></li>
-<li><a href="#objetivos">Objetivos</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-<div class="menu-toggle">&#9776;</div>
-</nav>
-<div class="hero">
-<h1>Olá, eu sou <span>João Werner</span></h1>
-<p>Desenvolvedor Front-End em formação, apaixonado por tecnologia </p>
-<a href="#contato" class="btn">Entre em contato</a>
-</div>
-</header>
+  <!-- SOBRE -->
+  <section id="sobre" class="section dark">
+    <h2>Sobre mim</h2>
+    <p>
+      Olá! Meu nome é <b>João Werner</b> e busco uma <b>oportunidade na área de TI</b>. Tenho conhecimentos em <b>HTML, CSS, JavaScript</b> e atualmente estou me aprofundando em <b>Banco de Dados</b> e <b>C#</b>. Sou curioso e dedicado, sempre em busca de aprender algo novo e aplicar na prática. Meu foco principal é atuar como <b>desenvolvedor Front-End</b>, mas também tenho grande interesse em expandir para o <b>Back-End</b> e <b>Full Stack</b> futuramente.
+    </p>
+  </section>
 
-<!-- SOBRE -->
-<section id="sobre" class="section">
-<h2>Sobre mim</h2>
-<p>Olá! Meu nome é <b>João Werner</b> e busco uma <b>oportunidade na área de TI</b>. Tenho conhecimentos em <b>HTML, CSS, JavaScript</b> e atualmente estou me aprofundando em <b>Banco de Dados</b> e <b>C#</b>.  
-Sou uma pessoa <b>curiosa e dedicada</b>, sempre em busca de aprender algo novo e aplicar na prática. Tenho facilidade em aprender ferramentas rapidamente, gosto de resolver problemas e acredito que a tecnologia pode transformar a vida das pessoas.  
-Meu foco principal é atuar como <b>desenvolvedor Front-End</b>, mas também tenho grande interesse em expandir meus conhecimentos em <b>Back-End</b> e <b>Desenvolvimento Full Stack</b> futuramente.</p>
-</section>
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section light">
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>HTML</h3>
+        <p class="level">Avançado</p>
+        <p>Criação de páginas semânticas e acessíveis.</p>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <p class="level">Avançado</p>
+        <p>Responsividade e design moderno.</p>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <p class="level">Básico</p>
+        <p>Lógica de programação e interatividade.</p>
+      </div>
+      <div class="skill">
+        <h3>Banco de Dados</h3>
+        <p class="level">Aprendizado</p>
+        <p>SQL, modelagem e integração.</p>
+      </div>
+      <div class="skill">
+        <h3>C#</h3>
+        <p class="level">Aprendizado</p>
+        <p>Explorando conceitos e lógica.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- HABILIDADES -->
-<section id="habilidades" class="section">
-<h2>Habilidades</h2>
-<div class="skills-container">
-<div class="skill-card"><strong>HTML</strong><div class="level">Avançado</div><p>Experiência em criação de páginas semânticas, acessíveis e bem estruturadas.</p></div>
-<div class="skill-card"><strong>CSS</strong><div class="level">Avançado</div><p>Conhecimento em responsividade .</p></div>
-<div class="skill-card"><strong>JavaScript</strong><div class="level">Básico</div><p>lógica de programação, interatividade em sites.</p></div>
-<div class="skill-card"><strong>Banco de Dados</strong><div class="level">Aprendizado</div><p>Iniciando estudos em SQL, modelagem e integração com aplicações.</p></div>
-<div class="skill-card"><strong>C#</strong><div class="level">Aprendizado</div><p>Explorando conceitos logica</p></div>
-</div>
-</section>
+  <!-- FORMAÇÃO -->
+  <section id="formacao" class="section dark">
+    <h2>Formação & Cursos</h2>
+    <div class="education">
+      <div class="edu-item">
+        <h3>Análise e Desenvolvimento de Sistemas</h3>
+        <p class="period">PUC — 2025 a 2028</p>
+        <p>Curso superior em andamento, com foco em programação, banco de dados e desenvolvimento de sistemas.</p>
+      </div>
+      <div class="edu-item">
+        <h3>Pacote Office Essencial</h3>
+        <p class="period">Udemy — 2024</p>
+        <p>Curso de produtividade e organização com Word, Excel e PowerPoint.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- FORMAÇÃO -->
-<section id="formacao" class="section">
-<h2>Formação & Cursos</h2>
-<div class="formacao-container">
-<div class="formacao-card">
-<h3>Análise e Desenvolvimento de Sistemas</h3>
-<p><b>PUC</b> — 2025 a 2028</p>
-<p>Curso superior em andamento, com foco em programação, banco de dados e desenvolvimento de sistemas.</p>
-</div>
-<div class="formacao-card">
-<h3>Pacote Office Essencial</h3>
-<p><b>Udemy</b> — 2024</p>
-<p>Curso de produtividade e organização com Word, Excel e PowerPoint.</p>
-</div>
+  <!-- SOFT SKILLS -->
+  <section id="softskills" class="section light">
+    <h2>Soft Skills & Interesses</h2>
+    <div class="softskills">
+      <span>💡 Criatividade</span>
+      <span>🤝 Trabalho em equipe</span>
+      <span>🕹️ Jogos e interfaces</span>
+      <span>📚 Aprendizado contínuo</span>
+      <span>🌐 Tecnologias web</span>
+    </div>
+  </section>
 
+  <!-- OBJETIVOS -->
+  <section id="objetivos" class="section dark">
+    <h2>Objetivos</h2>
+    <p>
+      Meu principal objetivo é <b>me consolidar como Desenvolvedor Front-End</b>, trabalhando com <b>HTML, CSS, JavaScript e frameworks modernos</b>. A médio prazo, pretendo expandir para o <b>Back-End</b>, com Node.js e bancos de dados relacionais. Meu sonho é <b>atuar em projetos de impacto</b>, sempre priorizando <b>acessibilidade, performance e experiência do usuário</b>.
+    </p>
+  </section>
 
-<!-- SOFT SKILLS -->
-<section id="softskills" class="section">
-<h2>Soft Skills & Interesses</h2>
-<div class="softskills-container">
-<span>💡 Criatividade — Gosto de buscar soluções diferentes para problemas comuns.</span>
-<span>🤝 Trabalho em equipe — Valorizo colaboração e troca de ideias.</span>
-<span>🕹️ Jogos e interfaces — Interesse em gamificação e usabilidade.</span>
-<span>📚 Aprendizado contínuo — Sempre estudando novas linguagens e tecnologias.</span>
-<span>🌐 Tecnologias web — Fascínio por design responsivo e aplicações interativas.</span>
-</div>
-</section>
-
-<!-- OBJETIVOS -->
-<section id="objetivos" class="section">
-<h2>Objetivos</h2>
-<p>Meu principal objetivo é <b>me consolidar como Desenvolvedor Front-End</b>, trabalhando com <b>HTML, CSS, JavaScript e frameworks modernos</b>.  
-A médio prazo, pretendo expandir para o <b>Back-End</b>, com Node.js e bancos de dados relacionais.  
-Meu sonho é <b>atuar em projetos de impacto</b>, criando aplicações que facilitem a vida das pessoas, sempre priorizando <b>acessibilidade, performance e experiência do usuário</b>.</p>
-</section>
-
-<!-- CONTATO -->
-<section id="contato" class="section">
-  <h2>Contato</h2>
-  <div class="contato-container">
-    <p>Entre em contato pelos links abaixo:</p>
-    <ul class="contato-icons">
-      <li>
-        <a href="mailto:jcwgmoreira@gmail.com" target="_blank" rel="noopener noreferrer">📧 E-mail</a>
-      </li>
-      <li>
-        <a href="https://wa.me/5531985917348" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/joao-de-cristo-werner-goncalves-moreira-a96b20376" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-      </li>
-      <li>
-        <a href="https://github.com/joaowernerg" target="_blank" rel="noopener noreferrer">🐱 GitHub</a>
-      </li>
+  <!-- CONTATO -->
+  <section id="contato" class="section light">
+    <h2>Contato</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:jcwgmoreira@gmail.com">📧 E-mail</a></li>
+      <li><a href="https://wa.me/5531985917348" target="_blank">💬 WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/joao-de-cristo-werner-goncalves-moreira-a96b20376" target="_blank">🔗 LinkedIn</a></li>
+      <li><a href="https://github.com/joaowernerg" target="_blank">🐱 GitHub</a></li>
     </ul>
-  </div>
-</section>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    © 2025 João Werner. Todos os direitos reservados.
+  </footer>
 
-<footer><p>© 2025 João Werner. Todos os direitos reservados.</p></footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
