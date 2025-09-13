@@ -1,13 +1,24 @@
-/* Fonts */
+/* =====================
+   FONTS & RESET
+===================== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  background-color: #1c1c1c;
-  color: #ccc;
+  background: #0a0a0a;
+  color: #e0e0e0;
   scroll-behavior: smooth;
 }
 
-/* HEADER */
+/* =====================
+   HEADER
+===================== */
 header {
   position: relative;
   min-height: 100vh;
@@ -16,7 +27,7 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #111, #000);
+  background: linear-gradient(135deg, #111111, #000000);
 }
 
 canvas#particles {
@@ -25,129 +36,236 @@ canvas#particles {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
+/* NAVBAR */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
   z-index: 100;
+  border-bottom: 1px solid #00ffff33;
 }
 
 nav h1 {
   font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
   color: #00ffff;
+  text-shadow: 0 0 10px #00ffffaa;
+  font-size: 1.8rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 nav ul li a {
-  color: #ccc;
+  color: #e0e0e0;
   text-decoration: none;
+  font-weight: bold;
   transition: 0.3s;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00ffff;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 nav ul li a:hover {
   color: #00ffff;
 }
 
-/* INTRO */
+/* =====================
+   INTRO
+===================== */
 .intro {
   text-align: center;
   z-index: 10;
+  padding: 0 20px;
 }
 
 .intro h2 {
   font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
   color: #00ffff;
-  font-size: 3em;
+  text-shadow: 0 0 20px #00ffff88, 0 0 40px #00ffff44;
+  margin-bottom: 15px;
 }
 
 .intro p {
-  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  margin-bottom: 30px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #00aaff;
-  color: #000;
+  padding: 14px 28px;
   font-weight: bold;
-  border-radius: 25px;
+  font-size: 1rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00ffff, #0077ff);
+  color: #000;
   text-decoration: none;
-  transition: 0.3s;
+  box-shadow: 0 0 20px #00ffff66, 0 0 40px #0077ff44;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00ffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ffff88, 0 0 60px #0077ff55;
 }
 
-/* SECTIONS */
+/* =====================
+   SECTIONS
+===================== */
 section {
-  padding: 80px 20px;
-  max-width: 1000px;
+  padding: 100px 20px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 section h2 {
   font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem;
   color: #00ffff;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  text-shadow: 0 0 10px #00ffff44;
 }
 
+/* HABILIDADES */
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
 }
 
 .skill {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 15px;
+  background: #111111;
+  padding: 25px;
+  border-radius: 20px;
+  min-width: 180px;
+  max-width: 250px;
   text-align: center;
-  min-width: 150px;
-  box-shadow: 0 0 10px #00ffff50;
+  box-shadow: 0 0 20px #00ffff33, 0 0 40px #0077ff22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #00ffff66, 0 0 60px #0077ff44;
 }
 
 .skill h3 {
-  color: #00aaff;
+  color: #00ffff;
+  margin-bottom: 10px;
 }
 
+.skill p {
+  color: #a0a0a0;
+}
+
+/* LISTAS */
 ul li {
   margin-bottom: 15px;
+  line-height: 1.5;
+  color: #c0c0c0;
 }
 
-/* FOOTER */
+/* =====================
+   FOOTER
+===================== */
 footer {
   text-align: center;
-  padding: 20px;
-  border-top: 1px solid #00ffff50;
+  padding: 30px 20px;
+  border-top: 1px solid #00ffff33;
   color: #888;
+  font-size: 0.9rem;
 }
 
-/* RESPONSIVO */
+/* =====================
+   RESPONSIVO
+===================== */
+
+/* Tablets grandes */
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 30px;
+  }
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  .intro h2 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Tablets pequenos / mobiles grandes */
 @media (max-width: 768px) {
   nav ul {
     display: none;
   }
-
   .skills {
     flex-direction: column;
     align-items: center;
+  }
+  .intro h2 {
+    font-size: 2.2rem;
+  }
+  .intro p {
+    font-size: 1.1rem;
+  }
+  .btn {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 70px 15px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+  .intro p {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  section {
+    padding: 60px 10px;
+  }
+  .skill {
+    min-width: 140px;
+    max-width: 200px;
   }
 }
