@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* =====================
    FONTS & RESET
 ===================== */
@@ -13,7 +14,25 @@ body {
   font-family: 'Roboto', sans-serif;
   background: #0a0a0a;
   color: #e0e0e0;
+=======
+:root {
+  --primary: #00ffff;
+  --secondary: #00aaff;
+  --bg-dark: #1c1c1c;
+  --text-light: #ccc;
+}
+
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* BODY */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
 /* =====================
@@ -27,11 +46,16 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+<<<<<<< HEAD
   background: linear-gradient(135deg, #111111, #000000);
+=======
+  background: linear-gradient(135deg,#111,#000);
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
 
 canvas#particles {
   position: absolute;
+<<<<<<< HEAD
   top: 0;
   left: 0;
   width: 100%;
@@ -53,19 +77,46 @@ nav {
   backdrop-filter: blur(10px);
   z-index: 100;
   border-bottom: 1px solid #00ffff33;
+=======
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  z-index:100;
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
 
 nav h1 {
   font-family: 'Orbitron', sans-serif;
+<<<<<<< HEAD
   font-weight: 700;
   color: #00ffff;
   text-shadow: 0 0 10px #00ffffaa;
   font-size: 1.8rem;
+=======
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  color: var(--primary);
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
 
 nav ul {
   list-style: none;
   display: flex;
+<<<<<<< HEAD
   gap: 30px;
 }
 
@@ -73,6 +124,15 @@ nav ul li a {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: bold;
+=======
+  gap: clamp(10px, 2vw, 20px);
+}
+
+nav ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
   transition: 0.3s;
   position: relative;
 }
@@ -92,10 +152,9 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-nav ul li a:hover {
-  color: #00ffff;
-}
+nav ul li a:hover { color: var(--primary); }
 
+<<<<<<< HEAD
 /* =====================
    INTRO
 ===================== */
@@ -103,10 +162,18 @@ nav ul li a:hover {
   text-align: center;
   z-index: 10;
   padding: 0 20px;
+=======
+/* HEADER CONTENT */
+.header-content {
+  text-align: center;
+  z-index: 10;
+  padding: 0 10px;
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
 
-.intro h2 {
+.header-content h2 {
   font-family: 'Orbitron', sans-serif;
+<<<<<<< HEAD
   font-size: 3.5rem;
   color: #00ffff;
   text-shadow: 0 0 20px #00ffff88, 0 0 40px #00ffff44;
@@ -117,17 +184,35 @@ nav ul li a:hover {
   font-size: 1.2rem;
   color: #a0a0a0;
   margin-bottom: 30px;
+=======
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--primary);
+}
+
+.header-content span { color: var(--secondary); }
+
+.header-content p {
+  margin: 15px 0;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
 
 .btn {
   display: inline-block;
+<<<<<<< HEAD
   padding: 14px 28px;
+=======
+  padding: clamp(8px,1.5vw,12px) clamp(15px,3vw,25px);
+  background: var(--secondary);
+  color: #000;
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
   font-weight: bold;
   font-size: 1rem;
   border-radius: 50px;
   background: linear-gradient(135deg, #00ffff, #0077ff);
   color: #000;
   text-decoration: none;
+<<<<<<< HEAD
   box-shadow: 0 0 20px #00ffff66, 0 0 40px #0077ff44;
   transition: all 0.3s ease;
 }
@@ -135,14 +220,28 @@ nav ul li a:hover {
 .btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 30px #00ffff88, 0 0 60px #0077ff55;
+=======
+  font-size: clamp(0.9rem,1.5vw,1.1rem);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--primary);
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
 
 /* =====================
    SECTIONS
 ===================== */
 section {
+<<<<<<< HEAD
   padding: 100px 20px;
   max-width: 1200px;
+=======
+  padding: clamp(40px,5vw,80px) 20px;
+  max-width: 1000px;
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -150,6 +249,7 @@ section {
 
 section h2 {
   font-family: 'Orbitron', sans-serif;
+<<<<<<< HEAD
   font-size: 2.8rem;
   color: #00ffff;
   text-align: center;
@@ -162,9 +262,23 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: center;
+=======
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: clamp(20px, 4vw, 40px);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
+/* SKILLS, EDUCATION, SOFTSKILLS */
+.skills, .education, .softskills {
+  display: flex;
+  flex-wrap: wrap;
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
+  justify-content: center;
+  gap: clamp(10px,2vw,20px);
+}
+
+<<<<<<< HEAD
 .skill {
   background: #111111;
   padding: 25px;
@@ -268,4 +382,81 @@ footer {
     min-width: 140px;
     max-width: 200px;
   }
+=======
+.skill, .edu-item {
+  background: #222;
+  padding: clamp(10px,2vw,20px);
+  border-radius: 15px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 0 10px var(--primary,50%);
+}
+
+.skill h3, .edu-item h3 {
+  color: var(--secondary);
+  font-size: clamp(1rem,2vw,1.5rem);
+}
+
+.level { color: var(--primary); font-weight: bold; margin:5px 0; }
+
+/* SOFTSKILLS */
+.softskills span {
+  display:inline-block;
+  margin:5px 10px;
+  padding:10px 20px;
+  background:#222;
+  border-radius:25px;
+  color: var(--primary);
+  font-size: clamp(0.8rem,2vw,1rem);
+  transition:0.3s;
+}
+
+.softskills span:hover { transform: scale(1.05); box-shadow:0 0 10px var(--primary,50%); }
+
+/* CONTACT */
+.contact-list {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:clamp(10px,2vw,15px);
+  list-style:none;
+  padding:0;
+}
+
+.contact-list li a {
+  color: var(--text-light);
+  text-decoration:none;
+  font-size: clamp(0.9rem,2vw,1.1rem);
+  transition:0.3s;
+}
+
+.contact-list li a:hover { color: var(--primary); }
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding: clamp(15px,3vw,20px);
+  border-top:1px solid var(--primary,50%);
+  color:#888;
+  font-size: clamp(0.8rem,1.5vw,1rem);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px){
+  nav ul { gap: 15px; }
+  .header-content h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+}
+
+@media (max-width: 768px){
+  nav ul { display: none; }
+  .skills, .education, .softskills { flex-direction: column; align-items: center; }
+  .btn { padding: 8px 15px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px){
+  header { min-height: 80vh; }
+  .header-content h2 { font-size: clamp(1.5rem,5vw,2rem); }
+  .header-content p { font-size: 1rem; }
+  .skill, .edu-item { min-width: 100%; }
+>>>>>>> 79e6637 (Atualiza portfólio: HTML, CSS, JS, scroll suave e partículas)
 }
