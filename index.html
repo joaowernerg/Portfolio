@@ -4,15 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>João Werner - Portfólio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- CANVAS DE PARTÍCULAS (FUNDO GLOBAL) -->
+  <canvas id="particles"></canvas>
+
   <!-- HEADER -->
-  <header class="header">
-    <canvas id="particles"></canvas>
+  <header class="header" id="inicio">
     <nav class="nav">
-      <h1 class="logo">João Werner</h1>
+      <div class="logo">
+        <span>⚡</span>
+        <span>João Werner</span>
+      </div>
       <ul class="menu">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
@@ -23,6 +32,7 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
+
     <div class="header-content">
       <h2>Olá, eu sou <span>João Werner</span></h2>
       <p>Desenvolvedor Front-End em formação, apaixonado por tecnologia ⚡</p>
@@ -34,7 +44,11 @@
   <section id="sobre" class="section dark">
     <h2>Sobre mim</h2>
     <p>
-      Olá! Meu nome é <b>João Werner</b> e busco uma <b>oportunidade na área de TI</b>. Tenho conhecimentos em <b>HTML, CSS, JavaScript</b> e atualmente estou me aprofundando em <b>Banco de Dados</b> e <b>C#</b>. Sou curioso e dedicado, sempre em busca de aprender algo novo e aplicar na prática. Meu foco principal é atuar como <b>desenvolvedor Front-End</b>, mas também tenho grande interesse em expandir para o <b>Back-End</b> e <b>Full Stack</b> futuramente.
+      Olá! Meu nome é <b>João Werner</b> e busco uma <b>oportunidade na área de TI</b>. Tenho conhecimentos em
+      <b>HTML, CSS, JavaScript</b> e atualmente estou me aprofundando em <b>Banco de Dados</b> e <b>C#</b>.
+      Sou curioso e dedicado, sempre em busca de aprender algo novo e aplicar na prática. Meu foco principal é atuar como
+      <b>desenvolvedor Front-End</b>, mas também tenho grande interesse em expandir para o <b>Back-End</b> e
+      <b>Full Stack</b> futuramente.
     </p>
   </section>
 
@@ -59,12 +73,12 @@
       </div>
       <div class="skill">
         <h3>Banco de Dados</h3>
-        <p class="level">Aprendizado</p>
+        <p class="level">Em aprendizado</p>
         <p>SQL, modelagem e integração.</p>
       </div>
       <div class="skill">
         <h3>C#</h3>
-        <p class="level">Aprendizado</p>
+        <p class="level">Em aprendizado</p>
         <p>Explorando conceitos e lógica.</p>
       </div>
     </div>
@@ -76,7 +90,7 @@
     <div class="education">
       <div class="edu-item">
         <h3>Análise e Desenvolvimento de Sistemas</h3>
-        <p class="period">PUC — 2025 a 2028</p>
+        <p class="period">PUC Minas — 2025 a 2028</p>
         <p>Curso superior em andamento, com foco em programação, banco de dados e desenvolvimento de sistemas.</p>
       </div>
       <div class="edu-item">
@@ -103,7 +117,10 @@
   <section id="objetivos" class="section dark">
     <h2>Objetivos</h2>
     <p>
-      Meu principal objetivo é <b>me consolidar como Desenvolvedor Front-End</b>, trabalhando com <b>HTML, CSS, JavaScript e frameworks modernos</b>. A médio prazo, pretendo expandir para o <b>Back-End</b>, com Node.js e bancos de dados relacionais. Meu sonho é <b>atuar em projetos de impacto</b>, sempre priorizando <b>acessibilidade, performance e experiência do usuário</b>.
+      Meu principal objetivo é <b>me consolidar como Desenvolvedor Front-End</b>, trabalhando com
+      <b>HTML, CSS, JavaScript e frameworks modernos</b>. A médio prazo, pretendo expandir para o <b>Back-End</b>,
+      com Node.js e bancos de dados relacionais. Meu sonho é <b>atuar em projetos de impacto</b>, sempre priorizando
+      <b>acessibilidade, performance e experiência do usuário</b>.
     </p>
   </section>
 
@@ -113,7 +130,7 @@
     <div class="project">
       <h3>Café Vintage</h3>
       <p>Site institucional para a cafeteria Café Vintage, com informações sobre o menu, avaliações e valores da marca.</p>
-      <a href="https://joaowernerg.github.io/cafeteria/" target="_blank" class="btn">Ver Projeto</a>
+      <a href="https://joaowernerg.github.io/cafeteria/" target="_blank" class="btn" rel="noopener noreferrer">Ver Projeto</a>
     </div>
   </section>
 
@@ -133,6 +150,7 @@
     © 2025 João Werner. Todos os direitos reservados.
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
